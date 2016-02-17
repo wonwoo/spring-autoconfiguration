@@ -37,7 +37,7 @@ helloConfig 존재 할때 실행하라.
 ```
 @EnableConfigurationProperties
 ```
- 위 ConditionalOnProperty 같이 사용하는 어노테이션이다. 속성 중(예를 들어) autoconfig.sample.id 가 있다면 id 값을 저장 해놓기 위한 class가 필요 하다. 그용도로 사용한다.
+ 위 ConditionalOnProperty 같이 사용하는 어노테이션이다. 프로퍼티의(예를 들어) autoconfig.sample.id 가 있다면 id 값을 저장 해놓기 위한 class가 필요 하다. 그용도로 사용한다.
  EnableConfigurationProperties 만 있어도 사용은 가능하지만 프로퍼티의 autoconfig.sample.id 설정한 값이 없다면 `null` 로 나온다. 만약 사용한다면 위의 어노테이션이랑 사용하길 권장한다.
 ```
 예) @EnableConfigurationProperties(SampleProperties.class)
