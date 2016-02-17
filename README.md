@@ -26,7 +26,7 @@ helloConfig 존재 할때 실행하라.
 ```
 @ConditionalOnProperty
 ```
- 속성중 prefix라는 속성이 있는데 이 속성의 해당되는 프로퍼티 값이 있다면 실행된다.
+ 속성중 `prefix`라는 속성이 있는데 이 속성의 해당되는 프로퍼티 값이 있다면 실행된다.
 
 ```
 예) @ConditionalOnProperty(prefix = "autoconfig.sample", name = "id")
@@ -37,8 +37,8 @@ helloConfig 존재 할때 실행하라.
 ```
 @EnableConfigurationProperties
 ```
- 위 ConditionalOnProperty 같이 사용하는 어노테이션이다. 프로퍼티의(예를 들어) autoconfig.sample.id 가 있다면 id 값을 저장 해놓기 위한 class가 필요 하다. 그용도로 사용한다.
- EnableConfigurationProperties 만 있어도 사용은 가능하지만 프로퍼티의 autoconfig.sample.id 설정한 값이 없다면 `null` 로 나온다. 만약 사용한다면 위의 어노테이션이랑 사용하길 권장한다.
+ 위 `ConditionalOnProperty` 같이 사용하는 어노테이션이다. 프로퍼티의(예를 들어) `autoconfig.sample.id` 가 있다면 `id` 값을 저장 해놓기 위한 class가 필요 하다. 그용도로 사용한다.
+ `EnableConfigurationProperties` 만 있어도 사용은 가능하지만 프로퍼티의 `autoconfig.sample.id` 설정한 값이 없다면 `null` 로 나온다. 만약 사용한다면 위의 어노테이션이랑 사용하길 권장한다.
 ```
 예) @EnableConfigurationProperties(SampleProperties.class)
 ```
@@ -47,7 +47,7 @@ helloConfig 존재 할때 실행하라.
 ```
 @ConditionalOnWebApplication
 ```
- 웹인지 아닌지 판단 하는 어노테이션이다. web일경우 실행된다. 별거 없다.
+ 웹인지 아닌지 판단 하는 어노테이션이다. `web`일경우 실행된다. 별거 없다.
 ```
 예) @ConditionalOnWebApplication
 ```
@@ -57,7 +57,7 @@ helloConfig 존재 할때 실행하라.
 ```
 @ConditionalOnNotWebApplication
 ```
- 위와 반대로 web이 아닐경우 실행된다.
+ 위와 반대로 `web`이 아닐경우 실행된다.
 ```
 예) @ConditionalOnNotWebApplication
 ```
@@ -68,7 +68,7 @@ helloConfig 존재 할때 실행하라.
 @ConditionalOnJava
 ```
  자바 버전을 설정 하는 어노테이션이다.
- 현재 버전(자신의 버전)이 설정한 버전보다 낮으면 실행된다.
+ `현재 버전(자신의 버전)`이 `설정한 버전`보다 낮으면 실행된다.
  예를 들어 자신의 버전이 1.8 이고 설정한 버전이 1.8 버전보다 작으면 실행되고 높으면 실행 되지 않는다.
 ```
 예) @ConditionalOnJava(value = ConditionalOnJava.JavaVersion.SIX)
@@ -79,7 +79,7 @@ helloConfig 존재 할때 실행하라.
 ```
 @ConditionalOnResource
 ```
- 리소스 경로에 파일이 있으면 실행되는 어노테이션이다. 특정 경로를 지정해주면 된다.
+ `리소스 경로`에 파일이 있으면 실행되는 어노테이션이다. 특정 경로를 지정해주면 된다.
 ```
 예) @ConditionalOnResource(resources = "classpath:/META-INF/resourcesfile")
 ```
