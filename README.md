@@ -2,7 +2,7 @@
 
 ## ConditionalOnMissingBean
 ```java
- @ConditionalOnMissingBean
+        @ConditionalOnMissingBean
 ```
  Bean 이 존재 하지 않을때 실행되는 어노테이션이다.
  bean name(String)으로 설정 할 수 도 있고 class(해보지 않음) 혹은 annotation(이것도 안해봄)등 설정 할 수 있는 모양이다.
