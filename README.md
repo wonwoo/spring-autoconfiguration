@@ -1,7 +1,7 @@
 # spring boot autoconfiguration 정리
 
 ## ConditionalOnMissingBean
-```
+```java
  @ConditionalOnMissingBean
 ```
  Bean 이 존재 하지 않을때 실행되는 어노테이션이다.
